@@ -1,17 +1,35 @@
-import type { IncomingMessage, ServerResponse } from "node:http";
+import { METHODS, type IncomingMessage, type ServerResponse } from "node:http";
+import { readProduct } from "../service/productservice";
+import type { Product } from "../type/producttype";
 
-export const productControler = (req :IncomingMessage, res :ServerResponse) => {
-    
-    if (req.url === "/products" && req.method === "GET") {
+export const productControler = (req: IncomingMessage, res: ServerResponse) => {
+  //get all product
+  const method = req.method;
+  const url = req.url;
+  const urlParts = url?.split("/");
+  const id = urlParts
+    ? urlParts[1] === "products"
+      ? Number(urlParts[2])
+      : null
+    : null;
+  console.log(id);
 
-        const products = [
-            { id: 1, name: "Product 1", price: 10 },
-            { id: 2, name: "Product 2", price: 20 },
-            { id: 3, name: "Product 3", price: 30 },
-        ];
+  if (req.url === "/products" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(
+      JSON.stringify({
+        message: "This is products Route .Product Got Succesfully ",
+        data: readProduct(),
+      }),
+    );
+  } else if (method === "GET" && id !== null) {
+    const data = readProduct();
+    const products = data.products;
 
-        res.writeHead(200, { "Content-Type": "application/json" });
+    const product = products.find((p: Product) => p.id === id);
 
-        res.end(JSON.stringify({ message: "This is products Route .Product Got Succesfully ", data: products }));
-    }   
-}   
+    res.writeHead(200, { "Content-Type": "application/json" });
+
+    res.end(JSON.stringify(product));
+  }
+};

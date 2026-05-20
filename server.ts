@@ -7,5 +7,5 @@ const server: Server = createServer((req: IncomingMessage, res) => {
 });
 
 server.listen(3000, () => {
-  console.log("Server is listening on port 3000");
+  console.log("Server is listening on port 3000 hi");
 });

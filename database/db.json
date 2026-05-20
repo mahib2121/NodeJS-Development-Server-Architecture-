@@ -1,44 +1,70 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "price": 79.99,
+      "category": "Electronics",
+      "description": "High-quality sound with noise cancellation",
+      "stock": 45
+    },
+    {
+      "id": 2,
+      "name": "Stainless Steel Water Bottle",
+      "price": 24.99,
+      "category": "Sports",
+      "description": "Keeps drinks cold for 24 hours",
+      "stock": 120
+    },
+    {
+      "id": 3,
+      "name": "USB-C Fast Charger",
+      "price": 34.99,
+      "category": "Electronics",
+      "description": "65W power delivery charging",
+      "stock": 87
+    },
+    {
+      "id": 4,
+      "name": "Yoga Mat",
+      "price": 19.99,
+      "category": "Sports",
+      "description": "Non-slip exercise mat, 6mm thick",
+      "stock": 56
+    },
+    {
+      "id": 5,
+      "name": "LED Desk Lamp",
+      "price": 44.99,
+      "category": "Home",
+      "description": "Adjustable brightness with USB charging",
+      "stock": 32
+    },
+    {
+      "id": 6,
+      "products": [
         {
-            "id": 1,
-            "name": "Wireless Bluetooth Headphones",
-            "price": 79.99,
-            "category": "Electronics",
-            "description": "High-quality sound with noise cancellation",
-            "stock": 45
-        },
-        {
-            "id": 2,
-            "name": "Stainless Steel Water Bottle",
-            "price": 24.99,
-            "category": "Sports",
-            "description": "Keeps drinks cold for 24 hours",
-            "stock": 120
-        },
-        {
-            "id": 3,
-            "name": "USB-C Fast Charger",
-            "price": 34.99,
-            "category": "Electronics",
-            "description": "65W power delivery charging",
-            "stock": 87
-        },
-        {
-            "id": 4,
-            "name": "Yoga Mat",
-            "price": 19.99,
-            "category": "Sports",
-            "description": "Non-slip exercise mat, 6mm thick",
-            "stock": 56
-        },
-        {
-            "id": 5,
-            "name": "LED Desk Lamp",
-            "price": 44.99,
-            "category": "Home",
-            "description": "Adjustable brightness with USB charging",
-            "stock": 32
+          "id": 1,
+          "name": "Phone",
+          "price": 1200
         }
-    ]
+      ]
+    },
+    {
+      "id": 5,
+      "name": "LED Desk Lamp",
+      "price": 44.99,
+      "category": "Home",
+      "description": "Adjustable brightness with USB charging",
+      "stock": 32
+    },
+    {
+      "id": 8,
+      "name": "LED Desk Mahib Lamp",
+      "price": 1144.99,
+      "category": "Home",
+      "description": "Adjustable brightness with USB charging",
+      "stock": 32
+    }
+  ]
 }
